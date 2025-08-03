@@ -14,15 +14,33 @@
     <!-- Daisy UI CDN -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.24/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
-    <style>
+    <!-- <style>
         .poppins-font {
             font-family: "Poppins", sans-serif;
             font-style: normal;
         }
-    </style>
+    </style> -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                        'cmn-Btn-Clr': '#E76F51',
+                        'cmn-heading-color': '#000000',
+                        'cmn-des-color': 'rgba(0, 0, 0, 0.80)',
+                        'hero-bg': 'rgba(231, 111, 81, 0.1)',
+                    },
+                    fontFamily: {
+                        'poppinsFont': ['Poppins', 'sans-serif'],
+                    },
+                },
+            },
+        }
+    </script>
 </head>
 
-<body class="poppins-font">
+<body class="font-poppinsFont">
     <header class="container mx-auto">
         <!-- navBar start -->
         <nav>
@@ -30,8 +48,8 @@
                 <div class="navbar-start">
                     <div class="dropdown">
                         <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 sm:h-7 sm:w-7 md:w-8 md:h-8" fill="none" viewBox="0 0 24 24"
-                                stroke="currentColor">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 sm:h-7 sm:w-7 md:w-8 md:h-8"
+                                fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                     d="M4 6h16M4 12h8m-8 6h16" />
                             </svg>
@@ -44,22 +62,145 @@
                             <li><a href="" class="text-base font-medium">Contact</a></li>
                         </ul>
                     </div>
-                    <a class="btn btn-ghost sm:text-[35px] text-[#000000] font-bold">Bike Dekho</a>
+                    <a class="btn btn-ghost text-2xl sm:text-[35px] text-cmn-heading-color font-bold">Bike Dekho</a>
                 </div>
                 <div class="navbar-end lg:gap-12">
                     <div class="navbar-center hidden lg:flex">
                         <ul class="menu menu-horizontal px-1">
                             <li><a class="text-base font-medium">Home</a></li>
-                            <li><a href="" class="text-base font-medium">Shop</a></li>
+                            <li><a class="text-base font-medium">Shop</a></li>
                             <li><a class="text-base font-medium">News</a></li>
-                            <li><a href="" class="text-base font-medium">Contact</a></li>
+                            <li><a class="text-base font-medium">Contact</a></li>
                         </ul>
                     </div>
-                    <a href=""><button class=" bg-[#E76F51] text-[#FFFFFF] text-base sm:text-xl font-bold px-6 sm:px-12 py-2 sm:py-4 rounded-lg">Login</button></a>
+                    <a><button
+                            class=" bg-cmn-Btn-Clr text-white text-base sm:text-xl font-bold px-6 sm:px-12 py-2 sm:py-4 rounded-lg">Login</button></a>
                 </div>
             </div>
         </nav>
         <!-- Navbar End -->
+
+        <!-- carosol  banner start -->
+        <!-- slide container -->
+        <div class="carousel w-full bg-hero-bg rounded-xl mt-16">
+            <!-- slide-1 -->
+            <div id="slide1" class="carousel-item relative w-full">
+                <!-- slide content -->
+                <div
+                    class="flex flex-col lg:flex-row lg:justify-center gap-14 xl:gap-16 2xl:gap-20 w-full lg:items-center py-20 px-4 sm:px-5 lg:px-0">
+                    <!-- text content -->
+                    <div class="max-w-[475px] mx-auto lg:mx-0">
+                        <h2 class="text-cmn-heading-color font-bold text-5xl sm:text-6xl">Ride-on R15 V4 with Smile</h2>
+                        <p class="text-cmn-des-color text-base font-light py-5">Amet minim mollit non deserunt ullamco
+                            est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.</p>
+                        <a><button
+                                class=" bg-cmn-Btn-Clr text-white text-base sm:text-xl font-bold px-6 sm:px-12 py-2 sm:py-4 rounded-lg">Purchase</button></a>
+                    </div>
+                    <!-- image content -->
+                    <div class="max-w-[412px] mx-auto lg:mx-0">
+                        <img src="images/slider/bike1.png" class="w-full" />
+                    </div>
+                </div>
+                <!-- slide Navigation -->
+                <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+                    <a href="#slide4" class="btn btn-circle">❮</a>
+                    <a href="#slide2" class="btn btn-circle">❯</a>
+                </div>
+            </div>
+            <!-- slide-2 -->
+            <div id="slide2" class="carousel-item relative w-full">
+                <!-- slide content -->
+                <div
+                    class="flex flex-col lg:flex-row lg:justify-center gap-14 w-full lg:items-center py-20 px-4 sm:px-5 lg:px-0">
+                    <!-- text content -->
+                    <div class="max-w-[475px] mx-auto lg:mx-0">
+                        <h2 class="text-cmn-heading-color font-bold text-5xl sm:text-6xl">Ride-on R15 V4 with Smile</h2>
+                        <p class="text-cmn-des-color text-base font-light py-5">Amet minim mollit non deserunt ullamco
+                            est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.</p>
+                        <a><button
+                                class=" bg-cmn-Btn-Clr text-white text-base sm:text-xl font-bold px-6 sm:px-12 py-2 sm:py-4 rounded-lg">Purchase</button></a>
+                    </div>
+                    <!-- image content -->
+                    <div class="max-w-[412px] mx-auto lg:mx-0">
+                        <img src="images/slider/bike2.png" class="w-full" />
+                    </div>
+                </div>
+                <!-- slide Navigation -->
+                <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+                    <a href="#slide1" class="btn btn-circle">❮</a>
+                    <a href="#slide3" class="btn btn-circle">❯</a>
+                </div>
+            </div>
+            <!-- slide-3 -->
+            <div id="slide3" class="carousel-item relative w-full">
+                <!-- slide content -->
+                <div
+                    class="flex flex-col lg:flex-row lg:justify-center gap-14 w-full lg:items-center py-20 px-4 sm:px-5 lg:px-0">
+                    <!-- text content -->
+                    <div class="max-w-[475px] mx-auto lg:mx-0">
+                        <h2 class="text-cmn-heading-color font-bold text-5xl sm:text-6xl">Ride-on R15 V4 with Smile</h2>
+                        <p class="text-cmn-des-color text-base font-light py-5">Amet minim mollit non deserunt ullamco
+                            est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.</p>
+                        <a><button
+                                class=" bg-cmn-Btn-Clr text-white text-base sm:text-xl font-bold px-6 sm:px-12 py-2 sm:py-4 rounded-lg">Purchase</button></a>
+                    </div>
+                    <!-- image content -->
+                    <div class="max-w-[412px] mx-auto lg:mx-0">
+                        <img src="images/slider/bike3.png" class="w-full" />
+                    </div>
+                </div>
+                <!-- slide Navigation -->
+                <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+                    <a href="#slide2" class="btn btn-circle">❮</a>
+                    <a href="#slide4" class="btn btn-circle">❯</a>
+                </div>
+            </div>
+            <!-- slide-4 -->
+            <div id="slide4" class="carousel-item relative w-full">
+                <!-- slide content -->
+                <div
+                    class="flex flex-col lg:flex-row lg:justify-center gap-14 w-full lg:items-center py-20 px-4 sm:px-5 lg:px-0">
+                    <!-- text content -->
+                    <div class="max-w-[475px] mx-auto lg:mx-0">
+                        <h2 class="text-cmn-heading-color font-bold text-5xl sm:text-6xl">Ride-on R15 V4 with Smile</h2>
+                        <p class="text-cmn-des-color text-base font-light py-5">Amet minim mollit non deserunt ullamco
+                            est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.</p>
+                        <a><button
+                                class=" bg-cmn-Btn-Clr text-white text-base sm:text-xl font-bold px-6 sm:px-12 py-2 sm:py-4 rounded-lg">Purchase</button></a>
+                    </div>
+                    <!-- image content -->
+                    <div class="max-w-[412px] mx-auto lg:mx-0">
+                        <img src="images/slider/bike4.png" class="w-full" />
+                    </div>
+                </div>
+                <!-- slide Navigation -->
+                <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+                    <a href="#slide3" class="btn btn-circle">❮</a>
+                    <a href="#slide1" class="btn btn-circle">❯</a>
+                </div>
+            </div>
+            <!-- <div id="slide2" class="carousel-item relative w-full">
+                <img src="https://img.daisyui.com/images/stock/photo-1609621838510-5ad474b7d25d.webp" class="w-full" />
+                <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+                    <a href="#slide1" class="btn btn-circle">❮</a>
+                    <a href="#slide3" class="btn btn-circle">❯</a>
+                </div>
+            </div>
+            <div id="slide3" class="carousel-item relative w-full">
+                <img src="https://img.daisyui.com/images/stock/photo-1414694762283-acccc27bca85.webp" class="w-full" />
+                <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+                    <a href="#slide2" class="btn btn-circle">❮</a>
+                    <a href="#slide4" class="btn btn-circle">❯</a>
+                </div>
+            </div>
+            <div id="slide4" class="carousel-item relative w-full">
+                <img src="https://img.daisyui.com/images/stock/photo-1665553365602-b2fb8e5d1707.webp" class="w-full" />
+                <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+                    <a href="#slide3" class="btn btn-circle">❮</a>
+                    <a href="#slide1" class="btn btn-circle">❯</a>
+                </div>
+            </div> -->
+        </div>
     </header>
     <main>
 
